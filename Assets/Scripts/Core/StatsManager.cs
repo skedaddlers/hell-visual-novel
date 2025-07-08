@@ -11,6 +11,7 @@ public class StatsManager : MonoBehaviour
 
     // Ini adalah implementasi Observer Pattern!
     public event Action<StatType, int> OnStatUpdated;
+    private HashSet<string> storyFlags;
 
     private void Awake()
     {
@@ -34,6 +35,8 @@ public class StatsManager : MonoBehaviour
         {
             playerStats.Add(stat, 0); // Semua stat mulai dari 0
         }
+
+        storyFlags = new HashSet<string>();
     }
 
     public int GetStat(StatType stat)
@@ -51,5 +54,19 @@ public class StatsManager : MonoBehaviour
             // Beri tahu semua 'observer' bahwa stat ini telah diperbarui
             OnStatUpdated?.Invoke(stat, playerStats[stat]);
         }
+    }
+
+    public void SetStoryFlag(string flag)
+    {
+        if (!string.IsNullOrEmpty(flag) && !storyFlags.Contains(flag))
+        {
+            storyFlags.Add(flag);
+            Debug.Log($"Story Flag set: {flag}");
+        }
+    }
+
+    public bool HasStoryFlag(string flag)
+    {
+        return storyFlags.Contains(flag);
     }
 }

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2beff872b2010064bbf0d68600a5df6e, type: 3}
+  m_Name: E_1_Day
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+    line: Hello, Welcome to hell! Now What are you doing here?
+    isFinalLine: 0
+  - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+    line: Are you here to get a job? Hahahahaha
+    isFinalLine: 0
+  choices:
+  - choiceText: Yes, I'm here to apply for a job
+    statChanges:
+    - statToChange: 0
+      amount: 1
+    haveDialogeAfterChoice: 1
+    dialogueAfterChoice:
+    - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+      line: Hahahahaha, are you sure you want to apply to this job?
+      isFinalLine: 0
+    - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+      line: It might be difficult you know!
+      isFinalLine: 0
+    - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+      line: But oh well, everyone who just started always quit right away anyways
+      isFinalLine: 0
+    - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+      line: Okay, I'll see you tomorrow for the training okay! Good luck hahahaha
+      isFinalLine: 0
+    storyFlagToSet: Job
+  - choiceText: No, I'm just wandering around
+    statChanges:
+    - statToChange: 2
+      amount: 1
+    haveDialogeAfterChoice: 1
+    dialogueAfterChoice:
+    - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+      line: WELL THEN WHAT ARE YOU DOING HERE!
+      isFinalLine: 0
+    - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+      line: GET OUT!
+      isFinalLine: 0
+    storyFlagToSet: Punish

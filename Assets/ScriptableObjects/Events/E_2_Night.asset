@@ -10,19 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2beff872b2010064bbf0d68600a5df6e, type: 3}
-  m_Name: Day_1_Day
+  m_Name: E_2_Night
   m_EditorClassIdentifier: 
   dialogueLines:
   - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
-    line: Helloooooo
+    line: Oh hello there!
+    isFinalLine: 0
   - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
-    line: And you are?
+    line: I think we shouldn't speak to each other when we're on the streets. Bye!
+    isFinalLine: 0
   choices:
-  - choiceText: Gabut
-    statChanges:
-    - statToChange: 0
-      amount: 1
-  - choiceText: Pukul Hella
+  - choiceText: Wait... ma'am!
     statChanges:
     - statToChange: 1
       amount: -1
+    haveDialogeAfterChoice: 0
+    dialogueAfterChoice: []
+    storyFlagToSet: 
+  - choiceText: Okay... (You leave her alone)
+    statChanges:
+    - statToChange: 0
+      amount: -1
+    haveDialogeAfterChoice: 0
+    dialogueAfterChoice: []
+    storyFlagToSet: 

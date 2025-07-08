@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2beff872b2010064bbf0d68600a5df6e, type: 3}
+  m_Name: E_1_Night
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - character: {fileID: 11400000, guid: e78498f508201284d845c12f5363864b, type: 2}
+    line: Oh hello, are you new around here?
+    isFinalLine: 0
+  - character: {fileID: 11400000, guid: e78498f508201284d845c12f5363864b, type: 2}
+    line: I haven't seen you anywhere around here
+    isFinalLine: 0
+  - character: {fileID: 11400000, guid: e78498f508201284d845c12f5363864b, type: 2}
+    line: Hey, what do you say I guide you around here?
+    isFinalLine: 0
+  choices:
+  - choiceText: Who are you?
+    statChanges:
+    - statToChange: 0
+      amount: -1
+    haveDialogeAfterChoice: 1
+    dialogueAfterChoice:
+    - character: {fileID: 11400000, guid: e78498f508201284d845c12f5363864b, type: 2}
+      line: Uh... Rude! I was just trying to be nice. Alright fine, get away from
+        me!
+      isFinalLine: 0
+    - character: {fileID: 11400000, guid: e78498f508201284d845c12f5363864b, type: 2}
+      line: I'm not wasting any of my time talking to meanheads like you!
+      isFinalLine: 1
+    storyFlagToSet: 
+  - choiceText: I would like to!
+    statChanges:
+    - statToChange: 2
+      amount: -1
+    haveDialogeAfterChoice: 1
+    dialogueAfterChoice:
+    - character: {fileID: 11400000, guid: e78498f508201284d845c12f5363864b, type: 2}
+      line: Yayyy! Let's go then!
+      isFinalLine: 0
+    - character: {fileID: 11400000, guid: e78498f508201284d845c12f5363864b, type: 2}
+      line: Here is the park, I usually take a walk here every night.
+      isFinalLine: 0
+    - character: {fileID: 11400000, guid: e78498f508201284d845c12f5363864b, type: 2}
+      line: It's refreshing you know, after a long day at work, nothing refreshes
+        me more than a light walk in the park
+      isFinalLine: 0
+    - character: {fileID: 11400000, guid: e78498f508201284d845c12f5363864b, type: 2}
+      line: 'Say... can I know your name? '
+      isFinalLine: 1
+    storyFlagToSet: 

@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<DialogueLine> dialogueQueue;
     private List<Choice> currentChoices;
+    private bool choicesDisplayed = false;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueEventSO dialogueEvent)
     {
+        choicesDisplayed = false;
         dialoguePanel.SetActive(true);
         choicesPanel.SetActive(false);
 
@@ -40,19 +42,26 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextLine()
     {
-        if (dialogueQueue.Count == 0)
+        if (dialogueQueue.Count == 0 && !choicesDisplayed)
         {
             DisplayChoices();
+            return;
+        }
+        else if (dialogueQueue.Count == 0 && choicesDisplayed)
+        {
+            GameManager.Instance.ProgressTime(); 
             return;
         }
 
         DialogueLine currentLine = dialogueQueue.Dequeue();
         characterNameText.text = currentLine.character.characterName;
+        UIManager.Instance.ChangeCharacterSprite(currentLine.character);
         dialogueText.text = currentLine.line;
     }
 
     private void DisplayChoices()
     {
+        choicesDisplayed = true;
         dialoguePanel.SetActive(false); // Sembunyikan panel dialog
         choicesPanel.SetActive(true);
 
@@ -85,7 +94,25 @@ public class DialogueManager : MonoBehaviour
             StatsManager.Instance.ChangeStat(statChange.statToChange, statChange.amount);
         }
 
-        // Lanjutkan alur game
-        GameManager.Instance.ProgressTime();
+        if (!string.IsNullOrEmpty(selectedChoice.storyFlagToSet))
+        {
+            StatsManager.Instance.SetStoryFlag(selectedChoice.storyFlagToSet);
+        }
+
+        // Cek apakah ada event lanjutan langsung (Immediate Branching)
+        if (selectedChoice.haveDialogeAfterChoice)
+        {
+            foreach (var line in selectedChoice.dialogueAfterChoice)
+            {
+                dialogueQueue.Enqueue(line);
+            }
+            dialoguePanel.SetActive(true); // Tampilkan kembali panel dialog
+            DisplayNextLine(); // Tampilkan dialog berikutnya
+        }
+        else
+        {
+            // Jika tidak ada, lanjutkan alur game seperti biasa
+            GameManager.Instance.ProgressTime();
+        }
     }
 }

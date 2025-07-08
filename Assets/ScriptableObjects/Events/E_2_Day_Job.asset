@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2beff872b2010064bbf0d68600a5df6e, type: 3}
+  m_Name: E_2_Day_Job
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+    line: So, I think this job suits you
+    isFinalLine: 0
+  - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+    line: How about we start the training?
+    isFinalLine: 0
+  choices:
+  - choiceText: Okay
+    statChanges:
+    - statToChange: 0
+      amount: 1
+    haveDialogeAfterChoice: 1
+    dialogueAfterChoice:
+    - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+      line: Good, come on!
+      isFinalLine: 1
+    storyFlagToSet: 
+  - choiceText: Yes Ma'am
+    statChanges:
+    - statToChange: 1
+      amount: 1
+    haveDialogeAfterChoice: 1
+    dialogueAfterChoice:
+    - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
+      line: Just so you know, your polite attitide won't make any difference here
+      isFinalLine: 1
+    storyFlagToSet: 

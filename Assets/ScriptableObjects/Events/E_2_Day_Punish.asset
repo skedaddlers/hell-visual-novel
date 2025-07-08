@@ -10,19 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2beff872b2010064bbf0d68600a5df6e, type: 3}
-  m_Name: Day_1_Night
+  m_Name: E_2_Day_Punish
   m_EditorClassIdentifier: 
   dialogueLines:
   - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
-    line: Iya malam hari ini
+    line: 'Yea, so you DON''T want a job? '
+    isFinalLine: 0
   - character: {fileID: 11400000, guid: 1f1c7ae0de7385b48ad0cb4cce86fbaf, type: 2}
-    line: Mau tidur di rumahku saja?
+    line: Then you should be away from here
+    isFinalLine: 0
   choices:
-  - choiceText: Gaskeun
-    statChanges:
-    - statToChange: 0
-      amount: -1
-  - choiceText: Gk dlu
+  - choiceText: oh noo...
     statChanges:
     - statToChange: 2
-      amount: -1
+      amount: 1
+    haveDialogeAfterChoice: 0
+    dialogueAfterChoice: []
+    storyFlagToSet: 
+  - choiceText: I'm cooked
+    statChanges:
+    - statToChange: 2
+      amount: 1
+    haveDialogeAfterChoice: 0
+    dialogueAfterChoice: []
+    storyFlagToSet: 

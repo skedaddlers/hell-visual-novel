@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4312d71bf9f991459adafe1024d0edc, type: 3}
-  m_Name: Character
+  m_Script: {fileID: 11500000, guid: adefcc664e8a2fc45be5202c114cc90a, type: 3}
+  m_Name: T_2_Night
   m_EditorClassIdentifier: 
-  characterName: Eliza
-  age: 22
-  occupation: Admin
+  defaultEvent: {fileID: 11400000, guid: 03b6d3d4823b6214686fecf67b992aa5, type: 2}
+  conditionalBranches: []

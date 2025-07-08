@@ -6,4 +6,5 @@ public class CharacterSO : ScriptableObject
     public string characterName;
     public int age;
     public string occupation;
+    public Sprite characterSprite;
 }

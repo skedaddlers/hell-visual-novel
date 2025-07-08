@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4312d71bf9f991459adafe1024d0edc, type: 3}
-  m_Name: Hella
+  m_Script: {fileID: 11500000, guid: adefcc664e8a2fc45be5202c114cc90a, type: 3}
+  m_Name: T_1_Night
   m_EditorClassIdentifier: 
-  characterName: Hella
-  age: 26
-  occupation: HRD
-  characterSprite: {fileID: 21300000, guid: 5ed77cd3e8912d84bb85c5f0e9b3136a, type: 3}
+  defaultEvent: {fileID: 11400000, guid: 56b7e0044a5c3564db1ae4d70efad897, type: 2}
+  conditionalBranches: []

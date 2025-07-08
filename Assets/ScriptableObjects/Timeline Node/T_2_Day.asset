@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adefcc664e8a2fc45be5202c114cc90a, type: 3}
+  m_Name: T_2_Day
+  m_EditorClassIdentifier: 
+  defaultEvent: {fileID: 11400000, guid: 6aef4829e77eaf94c806cbde9a5403c4, type: 2}
+  conditionalBranches:
+  - requiredFlag: Job
+    eventToPlay: {fileID: 11400000, guid: 6aef4829e77eaf94c806cbde9a5403c4, type: 2}
+  - requiredFlag: Punish
+    eventToPlay: {fileID: 11400000, guid: 8492eda7e8ab35f4ea7a604776d621c8, type: 2}
