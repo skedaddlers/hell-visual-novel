@@ -16,6 +16,8 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"TimeSlot":{"_value":2,"_name":"TimeSlot","_id":"9bc5ed59-d7e5-4329-9e36-8fc4db59b617","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"CurrentTime":{"_name":"CurrentTime","_id":"a16ddfd8-3c1f-453e-94d5-137a3a7138eb","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"CurrentDay":{"_name":"CurrentDay","_id":"4014bfb2-dae5-4958-a43b-d113e039037a","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"CurrentLocation":{"_name":"CurrentLocation","_id":"9481a3bc-485c-4d7f-9e3c-80b3593319af","$type":"NodeCanvas.Framework.Variable`1[[EventLocation,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"CurrentActivity":{"_name":"CurrentActivity","_id":"14ea76ac-f3c9-4352-8e11-4ccc41ebe066","$type":"NodeCanvas.Framework.Variable`1[[EventActivity,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences: []
   _UID: d5e9961e-1951-4d5e-bc19-95f9d69b1248
